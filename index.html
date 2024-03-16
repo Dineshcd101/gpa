@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <div id="calculator">
+        <a href="#" id="homeIcon"><i class="fas fa-home home-icon"></i></a> <!-- Ensure correct class for the home icon -->
+        
+        <div id="modeToggle">
+            <label class="switch">
+                <input type="checkbox" id="modeSwitch" onclick="toggleDarkMode()">
+                <span class="slider round"></span>
+            </label>
+            <span id="modeLabel">Dark Mode</span>
+        </div>
+
+        <h2>GPA Calculator</h2>
+
+        <div id="subjectInputs" class="subject-inputs">
+            <input type="number" id="numSubjects" placeholder="Enter number of subjects" required>
+            <button onclick="generateSubjectFields()">Enter</button>
+        </div>
+
+        <div id="subjectsContainer"></div>
+
+        <button id="calculateButton" onclick="calculateGPA()">Calculate GPA</button>
+        <button id="resetButton" onclick="resetFields()">Reset</button>
+
+        <div id="result"></div>
+
+        <div id="aboutIcon" onclick="showAboutPopup()">ℹ️</div>
+        <div id="aboutPopup">
+            <p>Made By Dinesh Panthi</p>
+            <p>1. Maker: Dinesh Panthi</p>
+            <p>2. Location: Nepal</p>
+            <p>3. Youtube Channel: <a href="https://www.youtube.com/@creator-dinesh/" target="_blank">Creator Dinesh(CD)</a></p>
+            <button onclick="closeAboutPopup()">Close</button>
+        </div>
+
+        <p id="madeByText">-Made By Dinesh Panthi.</p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
